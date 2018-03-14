@@ -30,7 +30,7 @@ public class SpringSampleAppApplication {
 	}
 }
 
-
+@PropertySource("classpath:application.properties")
 @RestController
 @RequestMapping("/")
 @RefreshScope

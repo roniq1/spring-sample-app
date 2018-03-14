@@ -30,7 +30,9 @@ public class SpringSampleAppApplication {
 	}
 }
 
-@PropertySource("classpath:application.properties")
+@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,
+        HibernateJpaAutoConfiguration.class,
+        DataSourceTransactionManagerAutoConfiguration.class })
 @RestController
 @RequestMapping("/")
 @RefreshScope

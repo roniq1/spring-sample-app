@@ -50,7 +50,9 @@ class HomeRestController {
 
 	@RequestMapping("/")
 	public String home(){
-         return "<h1>"+hostname+"</h1>";
+	 System.out.println("connection url: "+env.getProperty("spring.datasource.url"));
+	 System.out.println("Username: "+env.getProperty("spring.datasource.username")+"\nPassword: "+env.getProperty("spring.datasource.password"));
+	 return "<h1>"+hostname+env.getProperty("spring.datasource.username")+" "+env.getProperty("spring.datasource.password")+" "+env.getProperty("spring.datasource.url")"</h1>";
 	}
 
 	@RequestMapping("/healthz")

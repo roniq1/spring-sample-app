@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 import org.springframework.core.env.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringSampleAppApplication {
@@ -31,9 +31,9 @@ public class SpringSampleAppApplication {
 	}
 }
 
-@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,
+/*@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class,
-        DataSourceTransactionManagerAutoConfiguration.class })
+        DataSourceTransactionManagerAutoConfiguration.class })*/
 @RestController
 @RequestMapping("/")
 @RefreshScope
